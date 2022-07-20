@@ -40,6 +40,7 @@
         @endif
         <button class="btn btn-outline-dark m-1" onclick="location.href='{{route('list')}}'">관람/체험 페이지</button>
         <button class="btn btn-outline-warning m-1" onclick="location.href='{{route('border')}}'">버스킹 커뮤니티 페이지</button>
+        <button class="btn btn-outline-info m-1" onclick="location.href='{{route('my')}}'">마이페이지</button>
     </div>
     <div class="modal fade" id="sign">
         <div class="modal-dialog">
