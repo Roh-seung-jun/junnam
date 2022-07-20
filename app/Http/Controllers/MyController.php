@@ -11,7 +11,7 @@ class MyController extends Controller
     public function myPage(){
         $data = [];
         $data['list'] = Recruitment::where('user_id',auth()->user()->id)->get();
-        return view('my');
+        return view('my',compact(['data']));
     }
     public function set(Request $request)
     {

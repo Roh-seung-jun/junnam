@@ -32,10 +32,27 @@
             </div>
             <button class="btn btn-outline-info" type="submit">저장</button>
         </form>
-        <div class="list">
+        <table class="table w-75">
+            <thead>
+            <tr>
+                <th>제목</th>
+                <th>작성 날짜</th>
+                <th>분야</th>
+                <th>상태</th>
+            </tr>
+            </thead>
+            <tbody>
             @foreach($data['list'] as $item)
-
+                <tr>
+                    <td>{{$item->title}}</td>
+                    <td>{{$item->create_dt}}</td>
+                    <td>{{\App\Category::find($item->category_id)['category']}}</td>
+                    <td>
+                        
+                    </td>
+                </tr>
             @endforeach
-        </div>
+            </tbody>
+        </table>
     </div>
 @endsection
