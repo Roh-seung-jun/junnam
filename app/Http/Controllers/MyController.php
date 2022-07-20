@@ -10,7 +10,7 @@ class MyController extends Controller
 {
     public function myPage(){
         $data = [];
-        $data['list'] = Recruitment::where('user_id')
+        $data['list'] = Recruitment::where('user_id',auth()->user()->id)->get();
         return view('my');
     }
     public function set(Request $request)
